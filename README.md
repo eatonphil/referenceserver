@@ -1,4 +1,4 @@
-# A barebones reference server in a few languages
+# A barebones UNIX reference server
 
 I find myself writing this server in some language every few months.
 Each time I have to scour the web for a good reference. Use this
