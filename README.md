@@ -9,5 +9,5 @@ to write your own bare server in C or other languages with a UNIX API
 
 ```bash
 make
-bin/cserver
+bin/cserver # go to localhost:15000
 ```
