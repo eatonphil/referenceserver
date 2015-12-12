@@ -1,0 +1,11 @@
+ // Artifacts
+ .*
+ !*.gitignore
+
+// Emacs artifacts
+*~
+\#*\#
+*_flymake.*
+
+// Project artifacts
+bin
