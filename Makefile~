@@ -1,0 +1,5 @@
+.PHONY: all
+
+all:
+	@mkdir -p bin
+	cc cserver.c -o bin/cserver
