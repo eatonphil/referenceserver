@@ -2,9 +2,9 @@ let socket = Unix.socket Unix.PF_INET Unix.SOCK_STREAM 0;;
 let addr = Unix.ADDR_INET(Unix.inet_addr_any, 15000);;
 let _ = Unix.setsockopt socket Unix.SO_REUSEADDR true;;
 let _ = Unix.bind socket addr;;
+let _ = Unix.listen socket 10;;
 
 let rec loop () =
-    let _ = Unix.listen socket 10 in
     let new_socket, _ = Unix.accept socket in
     let bytes = Bytes.create 1024 in
     let nread = Unix.recv new_socket bytes 0 1024 [] in
