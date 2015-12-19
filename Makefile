@@ -12,7 +12,7 @@ build-ocaml:
 
 build-python:
 	@mkdir -p bin
-	python -m py_compile python/server.py
+	python2.7 -m py_compile python/server.py
 	@mv python/server.pyc bin/pythonserver
 
 build-sbcl:

@@ -15,7 +15,9 @@ make build-ocaml
 bin/ocamlserver # go to localhost:15000
 
 make build-python
-python bin/pythonserver # go to localhost:15000
+python2.7 bin/pythonserver # go to localhost:15000
+# -- OR --
+python3.5 python/server.py # go to localhost:15000
 
 make build-sbcl
 bin/sbclserver # go to localhost:15000
