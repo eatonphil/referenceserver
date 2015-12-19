@@ -13,4 +13,10 @@ bin/cserver # go to localhost:15000
 
 make build-ocaml
 bin/ocamlserver # go to localhost:15000
+
+make build-python
+python bin/pythonserver # go to localhost:15000
+
+make build-sbcl
+bin/sbclserver # go to localhost:15000
 ```

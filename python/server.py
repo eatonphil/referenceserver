@@ -5,7 +5,7 @@ import socket
 def main():
     sock = socket.socket()
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
-    sock.bind(("", 9222))
+    sock.bind(("", 15000))
     sock.listen(-1)
 
     atexit.register(lambda: sock.shutdown(socket.SHUT_RDWR))
