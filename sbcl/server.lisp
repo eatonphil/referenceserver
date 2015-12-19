@@ -8,15 +8,15 @@
     (sb-bsd-sockets:socket-listen sock -1)
     sock))
 
-(defun accept-one (c)
-  (unwind-protect
-       (let ((stream (sb-bsd-sockets:socket-make-stream c :output t)))
-	 (format stream "Hello world~&"))
-    (sb-bsd-sockets:socket-close c)))
+(defun accept-one (l)
+  (let ((c (sb-bsd-sockets:socket-accept l)))
+    (unwind-protect
+	 (let ((stream (sb-bsd-sockets:socket-make-stream c :output t)))
+	   (format stream "Hello world~&"))
+      (sb-bsd-sockets:socket-close c))))
 
 (defun serve (l)
-  (let ((c (sb-bsd-sockets:socket-accept l)))
-    (sb-thread:make-thread (lambda () (accept-one c))))
+  (accept-one l)
   (serve l))
 
 (defun main ()
