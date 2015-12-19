@@ -20,3 +20,11 @@ python bin/pythonserver # go to localhost:15000
 make build-sbcl
 bin/sbclserver # go to localhost:15000
 ```
+
+# Notes
+
+These servers are very minimal and require no external libraries.
+They may suffer from serious problems (reading/writing completely,
+blocking, etc). If you notice these issues, feel free to file an
+issue or create a PR. If a fix does not seriously impede on the
+simplicity of the example, the changes may be incorporated.
