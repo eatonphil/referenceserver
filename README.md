@@ -1,4 +1,4 @@
-# A barebones UNIX reference server
+# Barebones UNIX socket servers
 
 I find myself writing this server in some language every few months.
 Each time I have to scour the web for a good reference. Use this
